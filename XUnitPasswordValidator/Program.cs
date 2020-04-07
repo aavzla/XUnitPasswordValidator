@@ -9,6 +9,7 @@ namespace XUnitPasswordValidator
             Console.WriteLine("This application will test if your password is valid accorging to the rules to meet:");
             Console.WriteLine("* The password must have at least 8 characters.");
             Console.WriteLine("* The password must have at least 1 UpperCase character.");
+            Console.WriteLine("* The password must have at least 1 Digit character.");
             var passwordValidator = new PasswordValidator();
             bool isValid = false;
             do

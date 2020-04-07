@@ -8,7 +8,7 @@ namespace XUnitPasswordValidator.Test
         public void Validate_GivenLongerThan8Chars_ReturnsTrue()
         {
             var passwordValidator = new PasswordValidator();
-            var password = "12345678a";
+            var password = "12345678A";
             var isValid = passwordValidator.Validate(password);
 
             Assert.True(isValid);
@@ -18,7 +18,7 @@ namespace XUnitPasswordValidator.Test
         public void Validate_GivenShorterThan8Chars_ReturnsFalse()
         {
             var passwordValidator = new PasswordValidator();
-            var password = "123456a";
+            var password = "123456A";
             var isValid = passwordValidator.Validate(password);
 
             Assert.False(isValid);
@@ -45,20 +45,20 @@ namespace XUnitPasswordValidator.Test
         }
 
         [Fact]
-        public void Validate_GivenAlphaNumericPassword_ReturnsTrue()
+        public void Validate_GivenPasswordWithDigit_ReturnsTrue()
         {
             var passwordValidator = new PasswordValidator();
-            var password = "12345678A";
+            var password = "1ABCDEFGHI";
             var isValid = passwordValidator.Validate(password);
 
             Assert.True(isValid);
         }
 
         [Fact]
-        public void Validate_GivenNonAlphaNumericPassword_ReturnsFalse()
+        public void Validate_GivenPasswordWithOutDigit_ReturnsFalse()
         {
             var passwordValidator = new PasswordValidator();
-            var password = "!#$%^&*()";
+            var password = "ABCDEFGHI";
             var isValid = passwordValidator.Validate(password);
 
             Assert.False(isValid);
