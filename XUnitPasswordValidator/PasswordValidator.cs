@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using XUnitPasswordValidator.Interfaces;
 
 namespace XUnitPasswordValidator
@@ -9,6 +7,12 @@ namespace XUnitPasswordValidator
     {
         public bool Validate(string password)
         {
+            /*
+             * The acceptance criteria is that the password:
+             * Must have at least 8 characters.
+             * Must have at least 1 UpperCase character.
+             */
+
             throw new NotImplementedException();
         }
     }
